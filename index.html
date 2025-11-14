@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Special Complete — Mumet</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body class="light">
+  <header class="site-header">
+    <div class="wrap">
+      <img src="assets/logo.png" class="logo" alt="Mumet">
+      <div class="title-group">
+        <h1>Special Complete — Mumet</h1>
+        <p class="tag">YouTube Random • Pencarian • Embed • AI Demo • PWA</p>
+      </div>
+      <div class="actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card player">
+      <h2>🎵 Player YouTube (Random otomatis)</h2>
+      <div class="frame-wrap">
+        <iframe id="ytFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="controls">
+        <button id="randBtn" class="small">Putar Random Lagi</button>
+        <button id="muteBtn" class="small">Mute/Unmute</button>
+        <select id="playlist" aria-label="Playlist"></select>
+      </div>
+
+      <div class="yt-search">
+        <input id="ytQuery" placeholder="Cari di YouTube (klik Cari atau Enter)..." />
+        <div class="yt-actions">
+          <button id="ytSearchBtn" class="small">Cari</button>
+          <button id="clearSearch" class="small">Bersihkan</button>
+        </div>
+        <div id="ytResults" class="results" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="card right">
+      <h2>📱 Embed Instagram / TikTok</h2>
+      <textarea id="embedInput" placeholder="Masukkan URL atau embed HTML..."></textarea>
+      <div><button id="showEmbed" class="small">Tampilkan</button> <button id="clearEmbed" class="small">Bersihkan</button></div>
+      <div id="embedOut" class="embedOut" role="region" aria-label="Embed output"></div>
+
+      <hr/>
+
+      <h2>🤖 AI Mini (Demo lokal)</h2>
+      <textarea id="aiInput" placeholder="Tanyakan sesuatu..."></textarea>
+      <div class="ai-actions">
+        <button id="aiBtn" class="small">Kirim (Demo)</button>
+        <button id="aiServerBtn" class="small">Kirim via Server (optional)</button>
+        <button id="aiClear" class="small">Bersihkan</button>
+      </div>
+      <div id="aiOut" class="aiOut" aria-live="polite"></div>
+
+      <hr/>
+
+      <h3>Kutipan & Notifikasi</h3>
+      <div id="quoteBox" class="quoteBox">Klik "Dapatkan Motivasi" untuk kutipan.</div>
+      <div class="quote-actions">
+        <button id="quoteBtn" class="small">Dapatkan Motivasi</button>
+        <button id="notifyToggle" class="small">Aktifkan Notifikasi</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>© 2025 Mumet — Special Complete</small></div>
+  </footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
